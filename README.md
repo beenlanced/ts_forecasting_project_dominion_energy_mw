@@ -51,3 +51,7 @@ https://www.youtube.com/watch?v=z3ZnOW-S550 - vid 2
 
 EDA - that involved cleaning up the data to mitigate effect of outliers (see eda_initial.ipynb and eda_adv.ipynb)
 Statistics - outlier removal using Tukey Boxplots
+
+# Acks
+
+[How to display a Matplotlib chart with FastAPI/ Nextjs without saving the chart locally? - Stack Overflow](https://stackoverflow.com/questions/73754664/how-to-display-a-matplotlib-chart-with-fastapi-nextjs-without-saving-the-chart)
