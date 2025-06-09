@@ -55,3 +55,20 @@ Statistics - outlier removal using Tukey Boxplots
 # Acks
 
 [How to display a Matplotlib chart with FastAPI/ Nextjs without saving the chart locally? - Stack Overflow](https://stackoverflow.com/questions/73754664/how-to-display-a-matplotlib-chart-with-fastapi-nextjs-without-saving-the-chart)
+
+# Docker build image
+
+docker run -d -p 8000:80 ts_xgb_forecasting
+
+http://127.0.0.1:8000 - running locally on machine
+
+With Docker
+Access the Application
+Open a web browser and go to http://localhost:8000. You should see the "Hello World" message from your FastAPI application.
+http://localhost:8000/- running when using docker container
+
+Test:
+http://localhost:8000/
+http://localhost:8000/info
+http://localhost:8000/plot-forecast
+http://localhost:8000/data_used_for_forecasting_html

@@ -1833,6 +1833,7 @@ dependencies = [
     { name = "pandas" },
     { name = "scikit-learn" },
     { name = "seaborn" },
+    { name = "uvicorn" },
     { name = "xgboost" },
 ]
 
@@ -1851,6 +1852,7 @@ requires-dist = [
     { name = "pandas", specifier = ">=2.3.0" },
     { name = "scikit-learn", specifier = ">=1.7.0" },
     { name = "seaborn", specifier = ">=0.13.2" },
+    { name = "uvicorn", specifier = ">=0.34.3" },
     { name = "xgboost", specifier = ">=3.0.2" },
 ]
 

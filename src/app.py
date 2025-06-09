@@ -23,6 +23,10 @@ import xgboost as xgb
 # AGG used in the example above is a backend that renders graphs as PNGs.
 matplotlib.use("Agg")
 
+# Get Bas
+BASE_DIR = Path(__file__).resolve().parent.parent
+template_path=str(Path(BASE_DIR, "templates"))
+
 # Get Path to the /eda folder - contains theXGBoost model and future data set to show forecasting
 eda_directory_path = Path(__file__).resolve().parent /"eda"
 model_path = f"{eda_directory_path.joinpath("model.json")}"
@@ -70,7 +74,7 @@ def create_plot_image(future_values_df: pd.DataFrame, model_path: str) -> io.Byt
 
 # Create FastAPI object API - for rendering the results of requests to the AI/ML model
 app = FastAPI()
-templates = Jinja2Templates(directory="templates") # Create a 'templates' directory
+templates = Jinja2Templates(directory=template_path) # Create a 'templates' directory
 
 # API operations - GET requests for various endpoints
 @app.get("/")
@@ -125,4 +129,4 @@ async def get_dataframe_as_html(request: Request) -> str:
     Returns:
         (Jinja2Templates.TemplateResponse): Dataframe rendered in HTML format of dataframe_template.html
     """
-    return templates.TemplateResponse({"request": request, "dataframe_html":future_values_df.to_html()}, "dataframe_template.html")
+    return templates.TemplateResponse("dataframe_template.html", {"request": request, "dataframe_html": future_values_df.to_html()})
