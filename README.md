@@ -7,7 +7,7 @@
 <br>
 
 ![Code Coverage](https://img.shields.io/badge/coverage-100%25-green)
-[![Flask App Tests](https://github.com/beenlanced/ts_forecasting_project_dominion_energy_mw/actions/workflows/ts_forecasting_test.yml/badge.svg)](https://github.com/beenlanced/ts_forecasting_project_dominion_energy_mw/actions/workflows/ts_forecasting_test.yml)
+[![TS Forcasting Tests](https://github.com/beenlanced/ts_forecasting_project_dominion_energy_mw/actions/workflows/ts_forecasting_test.yml/badge.svg)](https://github.com/beenlanced/ts_forecasting_project_dominion_energy_mw/actions/workflows/ts_forecasting_test.yml)
 
 ---
 
