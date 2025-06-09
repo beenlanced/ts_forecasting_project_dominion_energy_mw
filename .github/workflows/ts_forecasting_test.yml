@@ -1,0 +1,68 @@
+name: Time Series XGB Forecasting Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+
+  # Set up operating system to test virtually
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.13"]
+
+    steps:
+      # Step 0: Free up space to avoid no space left on device
+      - name: Delete huge unnecessary tools folder
+        run: rm -rf /opt/hostedtoolcache
+
+      # Step 1: Check out the code from the repository
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # Step 3: Install dependencies - notice use of pyproject toml groups instead of requirements
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install .[ci]
+
+      # Step 4: Add any debugging information we want to see
+      - name: Print debugging information
+        run: |
+          echo "Python Version: $(python --version)"
+          echo "Working Directory: $(pwd)"
+          echo "Contents of Working Directory: $(ls -l)"
+
+     # Step 4: Run Tests 
+     # (pytest .) instructs pytest test framework to discover and execute tests within current and sub directories.
+      - name: Run pytests
+        run : pytest .
+
+    # Step 5: Continuous Delivery to Dockerhub - Build latest image
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        if: ${{ github.event_name == 'push'}}
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: Push image to Dockerhub
+        uses: docker/build-push-action@v4.0.0
+        if: ${{ github.event_name == 'push'}}
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME}}/ts_xgb_forecasting
