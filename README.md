@@ -1,4 +1,4 @@
-# Time Series XGBoost Forecasting Application - An Example for How to Build Smart Python Projects Using UV.
+# Time Series XGBoost Forecasting Application - Predicting Dominion Energy Megawatt (MW) Hour Usage
 
 <p>
   <img src="./imgs/data_center_usage.jpg"/>
@@ -23,11 +23,11 @@ In total, there are approximately 580 data centers in total in the entire State 
 
 ### Problem
 
-Could we build a machine learning model to predict the energy consumption usage for Dominion Energy given multiple years worth of hourly Milliwatt hour consumption data?
+Could we build a machine learning model to predict the energy consumption usage for Dominion Energy given multiple years worth of hourly MW hour consumption data?
 
 #### My Proposed Solution
 
-I use a `eXtreme Gradient Boosting (XGBoost)` regression prediction model to forecast MW usage for Dominion data. I take advantage of the high accuracy and performance of XGBoost models for my predictor. I used the estimated energy consumption in Megawatts per 24 hour period per day from [Dominon Energy, Inc.](https://en.wikipedia.org/wiki/Dominion_Energy) between 2005-04-30 and 2018-01-02 as the data was freely available in Kaggle.
+I use a `eXtreme Gradient Boosting (XGBoost)` regression prediction model to forecast MW usage for Dominion data. I take advantage of the high accuracy and performance of XGBoost models for my predictor. I used the estimated energy consumption in MW per 24 hour period per day from [Dominon Energy, Inc.](https://en.wikipedia.org/wiki/Dominion_Energy) between 2005-04-30 and 2018-01-02 as the data was freely available in Kaggle.
 
 I used a couple of Python Jupyter notebooks to perform data analysis, feature engineering, and Machine Learning model development. In my data analysis, I noticed that there were outliers in the MW hour data that would reduce my ML model accuracy because the outliers would mislead the model during training. As a result, I used Tukey Box plot whiskers (high and low) to filter out outliers.
 
@@ -57,7 +57,7 @@ Lastly, I used Github Actions to perform CI/CD of the model generation and Fast 
 
 Obtained from Kaggle: [here](https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption?resource=download&select=DOM_hourly.csv)
 
-I use the estimated energy consumption in Megawatts per 24 hour period per day from [Dominon Energy, Inc. ](https://en.wikipedia.org/wiki/Dominion_Energy) between 2005-04-30 and 2018-01-02. Commonly referred to as Dominion, it is an American energy company headquartered in Richmond, Virginia that supplies electricity in parts of Virginia, North Carolina, and South Carolina and supplies natural gas to parts of Utah, Idaho and Wyoming, West Virginia, Ohio, Pennsylvania, North Carolina, South Carolina, and Georgia. Dominion also has generation facilities in Indiana, Illinois, Connecticut, and Rhode Island.
+I use the estimated energy consumption in MWs per 24 hour period per day from [Dominon Energy, Inc. ](https://en.wikipedia.org/wiki/Dominion_Energy) between 2005-04-30 and 2018-01-02. Commonly referred to as Dominion, it is an American energy company headquartered in Richmond, Virginia that supplies electricity in parts of Virginia, North Carolina, and South Carolina and supplies natural gas to parts of Utah, Idaho and Wyoming, West Virginia, Ohio, Pennsylvania, North Carolina, South Carolina, and Georgia. Dominion also has generation facilities in Indiana, Illinois, Connecticut, and Rhode Island.
 
 ---
 
