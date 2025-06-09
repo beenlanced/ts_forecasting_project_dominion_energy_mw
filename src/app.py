@@ -14,11 +14,8 @@ import matplotlib
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 import seaborn as sns
-from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import TimeSeriesSplit
 import xgboost as xgb
 
 # displaying the image in the user's browser on client side with matplotlib.use
@@ -52,11 +49,6 @@ def create_plot_image(future_values_df: pd.DataFrame, model_path: str) -> io.Byt
     Returns:
         (io.BytesIO): Matplotlib image out of the forecasted MegaWatt usage based on future_values_df inputs.
     """
-    # Get Path to the /eda folder - contains theXGBoost model and future data set to show forecasting
-    eda_directory_path = Path(__file__).resolve().parent /"eda"
-    model_path = f"{eda_directory_path.joinpath("model.json")}"
-    future_values_path = f"{eda_directory_path.joinpath("future_values.csv")}"
-
     # Get XGBoost model and future_values for prediction
     FEATURES = ["dayofyear", "hour", "dayofweek", "quarter", "month", "year",
                     "lag1", "lag2", "lag3"]
@@ -133,4 +125,4 @@ async def get_dataframe_as_html(request: Request) -> str:
     Returns:
         (Jinja2Templates.TemplateResponse): Dataframe rendered in HTML format of dataframe_template.html
     """
-    return templates.TemplateResponse("dataframe_template.html", {"request": request, "dataframe_html":future_values_df.to_html()})
+    return templates.TemplateResponse({"request": request, "dataframe_html":future_values_df.to_html()}, "dataframe_template.html")
