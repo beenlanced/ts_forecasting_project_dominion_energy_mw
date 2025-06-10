@@ -74,7 +74,6 @@ The project uses the well-known `source (SRC)` layout structure. It contains the
 - `Functional tests` and `unit tests` using `pytest`,
 - `Git` (version control),
 - `GitHub` with a pull request template like you might use at work,
-- `NLP` to translate user defined queries into the closest matches of related video content,
 - `Type` hinting using `Pylance`,
 - `Web application` using `FastAPI`, and
 - `uv` package management including use of `ruff` for linting and formatting.
