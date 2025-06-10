@@ -238,6 +238,7 @@ If you prefer to use Docker, you can install and run the project using a Docker 
 
    - Open your terminal or command prompt.
    - Run the following command to pull the Docker image from Docker Hub:
+     
      ```bash
      docker pull ubeenlanced/ts_xgb_forecasting:latest
      ```
