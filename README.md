@@ -290,7 +290,7 @@ Specifically, I would like to acknowlege:
 
 - [Rob Mulla](https://www.kaggle.com/code/robikscube/time-series-forecasting-with-machine-learning-yt) for the inspiration for this project and discussion of XGBoost machine learning models.
 
--[How to display a Matplotlib chart with FastAPI/ Nextjs without saving the chart locally? - Stack Overflow](https://stackoverflow.com/questions/73754664/how-to-display-a-matplotlib-chart-with-fastapi-nextjs-without-saving-the-chart) - Provided techniques for rendering figures and plots via FastAPI.
+- [How to display a Matplotlib chart with FastAPI/ Nextjs without saving the chart locally? - Stack Overflow](https://stackoverflow.com/questions/73754664/how-to-display-a-matplotlib-chart-with-fastapi-nextjs-without-saving-the-chart) - Provided techniques for rendering figures and plots via FastAPI.
 
 - [Hema Kalyan Murapaka](https://www.linkedin.com/in/hemakalyan) and [Benito Martin](https://martindatasol.com/blog) for sharing their README.md templates upon which I have derieved my README.md.
 
