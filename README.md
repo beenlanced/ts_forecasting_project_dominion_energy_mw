@@ -4,6 +4,8 @@
   <img src="./imgs/data_center_usage.jpg"/>
 </p>
 
+[image source](https://www.visualcapitalist.com/mapped-data-center-electricity-consumption-by-state/)
+
 <br>
 
 ![Code Coverage](https://img.shields.io/badge/coverage-100%25-green)
