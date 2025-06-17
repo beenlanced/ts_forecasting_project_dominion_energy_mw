@@ -277,7 +277,7 @@ The project is full of insights.
 
 ### Final Words
 
-Thanks for visting.
+Thanks for visiting.
 
 Give the project a star (⭐) if you liked it or if it was helpful to you!
 
