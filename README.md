@@ -295,7 +295,7 @@ Specifically, I would like to acknowlege:
 
 - [How to display a Matplotlib chart with FastAPI/ Nextjs without saving the chart locally? - Stack Overflow](https://stackoverflow.com/questions/73754664/how-to-display-a-matplotlib-chart-with-fastapi-nextjs-without-saving-the-chart) - Provided techniques for rendering figures and plots via FastAPI.
 
-- [Hema Kalyan Murapaka](https://www.linkedin.com/in/hemakalyan) and [Benito Martin](https://martindatasol.com/blog) for sharing their README.md templates upon which I have derieved my README.md.
+- [Hema Kalyan Murapaka](https://www.linkedin.com/in/hemakalyan) and [Benito Martin](https://martindatasol.com/blog) for sharing their README.md templates upon which I have derived my README.md.
 
 - The folks at Astral for their UV [documentation](https://docs.astral.sh/uv/)
 
