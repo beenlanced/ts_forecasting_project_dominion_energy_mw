@@ -93,7 +93,7 @@ def info() -> dict[str, str]:
     FASTAPI route that returns simple dictionary/JSON message to show site
 
     Returns:
-        (dict[str, str]): Dict with text descriping he purpose of the Fast API web application
+        (dict[str, str]): Dict with text describing he purpose of the Fast API web application
     """
     return {"name": "XGBoost Forecasting", "description": "An `eXtreme Gradient Boosting (XGBoost)` regression prediction model to forecast MegaWatt usage for Dominion Energy taking advantage of the high accuracy and performance of XGBoost models."}
 
