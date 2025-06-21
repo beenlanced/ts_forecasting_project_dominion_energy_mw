@@ -23,7 +23,7 @@ import xgboost as xgb
 # AGG used in the example above is a backend that renders graphs as PNGs.
 matplotlib.use("Agg")
 
-# Get Bas
+# Get Base path
 BASE_DIR = Path(__file__).resolve().parent.parent
 template_path=str(Path(BASE_DIR, "templates"))
 
