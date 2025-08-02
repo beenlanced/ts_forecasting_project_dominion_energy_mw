@@ -259,7 +259,7 @@ If you prefer to use Docker, you can install and run the project using a Docker 
 
 ## Special notes
 
-XGBoost utilizes Open Multi-Processing (OpenMP) for parallelization during training and prediction, which can significantly impact performance. If you are running on a 64-bit MacOS and you do not have OpenMP runtime installed you will need to install `libomp`. You can do so easily by
+XGBoost utilizes Open Multi-Processing (OpenMP) for parallelization during training and prediction, which can significantly impact performance. If you are running on a 64-bit macOS and you do not have OpenMP runtime installed you will need to install `libomp`. You can do so easily by
 
 ```bash
 brew install libomp
